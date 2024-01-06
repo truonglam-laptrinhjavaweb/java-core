@@ -1,1 +1,1 @@
-Khóa học java core cơ bản miễn phí tại Laptrinhjavaweb: https://laptrinhjavaweb.com/tu-hoc-java-209
+livestream học java, hibernate 6,7/1/2024
