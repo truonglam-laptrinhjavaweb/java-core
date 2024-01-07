@@ -1,11 +1,26 @@
 package com.laptrinhjavaweb.view;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+import com.laptrinhjavaweb.entity.CustomerEntity;
+import com.laptrinhjavaweb.utils.HibernateUtils;
 
 public class MenuView {
     
 	public static void main(String[] args) {
-		campaign();
+		//campaign();
+		List<CustomerEntity> customerEntities = new ArrayList<>();
+		Session session = HibernateUtils.getSessionFactory().openSession();
+		String sql = "FROM CustomerEntity";
+		Query<CustomerEntity> query = session.createQuery(sql, CustomerEntity.class);
+		customerEntities = query.getResultList();
+		for (CustomerEntity customer: customerEntities) {
+			System.out.println("ID: "+customer.getId()+", fullname: "+customer.getFullName()+"");
+		}
 	}
 	
 	private static void campaign() {
