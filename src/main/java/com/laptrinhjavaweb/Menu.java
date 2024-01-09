@@ -5,26 +5,22 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
+	
+	private static Scanner scanner = new Scanner(System.in);
     
 	public static void main(String[] args) {
-		displayMenu();
-	}
-	
-	private static void displayMenu() {
 		String headerMain = "** Dashboard **";
 		String[] options = {
-	    		"1- Thêm sản phẩm",
-	            "2- Danh sách sản phẩm",
-	            "3- Exit"
+	    		"1. Thêm sản phẩm",
+	            "2. Danh sách sản phẩm",
+	            "3. Exit"
 	    };
 		List<Product> products = new ArrayList<>();
-		Scanner scanner = new Scanner(System.in);
-		int option = 1;
 		boolean status = true;
 		while (status) {
 			printMenu(options, headerMain);
 			try {
-				option = scanner.nextInt();
+				int option = scanner.nextInt();
 				switch (option) {
 		        	case 1: addProduct(products);
 		        		break;
@@ -35,14 +31,13 @@ public class Menu {
 		        }
 			} catch (Exception e) {
 				System.out.println("** Nhập đúng định dạng nhé **");
-				scanner.next();
+				continue;
 			}
 		}
         scanner.close();
 	}
-
+	
 	private static void addProduct(List<Product> products) {
-		Scanner scanner = new Scanner(System.in);
 		System.out.print("Nhập tên sản phẩm: ");
         String name = scanner.nextLine();
         System.out.print("Nhập loại sản phẩm: ");
