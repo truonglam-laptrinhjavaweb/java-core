@@ -1,4 +1,5 @@
-/target/
+/java-co-ban/target/
 .settings
 *.classpath
 *.project
+/target/

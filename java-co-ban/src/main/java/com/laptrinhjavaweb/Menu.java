@@ -29,7 +29,7 @@ public class Menu {
 						break;
 		        }
 			} catch (Exception e) {
-				System.out.println("** Nhập đúng định dạng nhé **");
+				System.out.println("- Chú ý: Nhập đúng định dạng nhé!");
 				scanner.next();
 			}
 		}
