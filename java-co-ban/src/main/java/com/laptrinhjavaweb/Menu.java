@@ -5,10 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-	
-	private static Scanner scanner = new Scanner(System.in);
     
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 		String headerMain = "** Dashboard **";
 		String[] options = {
 	    		"1. Thêm sản phẩm",
@@ -31,12 +30,14 @@ public class Menu {
 		        }
 			} catch (Exception e) {
 				System.out.println("** Nhập đúng định dạng nhé **");
-				continue;
+				scanner.next();
 			}
 		}
+		scanner.close();
 	}
 	
 	private static void addProduct(List<Product> products) {
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Nhập tên sản phẩm: ");
         String name = scanner.nextLine();
         System.out.print("Nhập loại sản phẩm: ");
