@@ -34,7 +34,6 @@ public class Menu {
 				continue;
 			}
 		}
-        scanner.close();
 	}
 	
 	private static void addProduct(List<Product> products) {
