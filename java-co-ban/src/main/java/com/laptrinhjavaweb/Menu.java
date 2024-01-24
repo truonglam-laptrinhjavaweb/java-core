@@ -33,14 +33,13 @@ public class Menu {
 				scanner.next();
 			}
 		}
-		scanner.close();
 	}
 	
 	private static void addProduct(List<Product> products) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Nhập tên sản phẩm: ");
+		System.out.print("- Nhập tên sản phẩm: ");
         String name = scanner.nextLine();
-        System.out.print("Nhập loại sản phẩm: ");
+        System.out.print("- Nhập loại sản phẩm: ");
         String category = scanner.nextLine();
         products.add(new Product(name, category));
 	}
