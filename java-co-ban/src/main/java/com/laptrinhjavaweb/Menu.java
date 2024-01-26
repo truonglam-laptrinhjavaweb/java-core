@@ -25,7 +25,9 @@ public class Menu {
 		        		break;
 		        	case 2: showProduct(products);  
 		        		break;
-		        	case 3: status = false; 
+		        	case 3: 
+		        		System.out.println("Chương trình kết thúc, tạm biệt hẹn gặp lại nhé");
+		        		status = false; 
 						break;
 		        }
 			} catch (Exception e) {
@@ -46,7 +48,7 @@ public class Menu {
 	
 	private static void showProduct(List<Product> products) {
 		for (Product item: products) {
-			System.out.println("Tên sản phẩm: "+item.getName()+", Loại sản phẩm: "+item.getCategory()+"");
+			System.out.println("- Tên sản phẩm: "+item.getName()+", Loại sản phẩm: "+item.getCategory()+"");
 		}
 	}
 
