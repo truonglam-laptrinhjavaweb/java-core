@@ -10,8 +10,8 @@ public class Menu {
 		Scanner scanner = new Scanner(System.in);
 		String headerMain = "** Dashboard **";
 		String[] options = {
-	    		"1. Thêm sản phẩm",
-	            "2. Danh sách sản phẩm",
+	    		"1. Thêm dịch vụ",
+	            "2. Danh sách dịch vụ",
 	            "3. Exit"
 	    };
 		List<Product> products = new ArrayList<>();
@@ -39,16 +39,16 @@ public class Menu {
 	
 	private static void addProduct(List<Product> products) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("- Nhập tên sản phẩm: ");
+		System.out.print("- Nhập tên dịch vụ: ");
         String name = scanner.nextLine();
-        System.out.print("- Nhập loại sản phẩm: ");
+        System.out.print("- Nhập loại dịch vụ: ");
         String category = scanner.nextLine();
         products.add(new Product(name, category));
 	}
 	
 	private static void showProduct(List<Product> products) {
 		for (Product item: products) {
-			System.out.println("- Tên sản phẩm: "+item.getName()+", Loại sản phẩm: "+item.getCategory()+"");
+			System.out.println("- Tên dịch vụ: "+item.getName()+", Loại dịch vụ: "+item.getCategory()+"");
 		}
 	}
 
